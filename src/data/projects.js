@@ -19,7 +19,7 @@ export default [
     id: 3,
     title: 'Project3',
     imgUrl: '/test.png',
-    stack: ['YourMother', 'Tailwind', 'C++'],
+    stack: ['test', 'Tailwind', 'C++'],
     liveLink: 'live',
     gitLink: 'git',
   },
