@@ -1,0 +1,78 @@
+.navbar {
+  font-size: larger;
+  padding: 1px;
+}
+
+.header {
+  text-align: center;
+  position: relative;
+  top: 250px;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+#hero--img {
+  background: url('/hero4.png');
+  height: 100vh;
+  overflow: hidden;
+  background-size: cover;
+  width: 100%;
+  background-position: center;
+}
+
+.projectButton {
+  border-radius: 25px;
+}
+
+.projectButton:hover {
+  zoom: 110%;
+  font-size: large;
+}
+
+.linkdin--logo {
+  max-height: 50px;
+  max-width: 50px;
+  margin: 0;
+}
+
+.github--logo {
+  max-height: 60px;
+  max-width: 60px;
+  margin: 0;
+}
+
+.form-control {
+  background-color: rgb(209, 209, 209);
+}
+
+@media (max-width: 768px) {
+  .hero-image {
+    height: 300px;
+  }
+  .project--img {
+    width: 100%;
+  }
+}
+
+.contact {
+  background-color: rgb(27, 27, 27);
+  margin-top: 50px;
+  box-shadow: 0px 0px 25px rgb(0, 0, 0);
+  min-height: 400px;
+}
+
+.project--img {
+  aspect-ratio: 16/9;
+  object-fit: fill;
+}
