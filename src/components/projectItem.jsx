@@ -1,6 +1,6 @@
 export default function projectItem({ title, img, stack, liveLink, gitLink }) {
   return (
-    <div className="row mx-2 my-3 border shadow-lg rounded projectCard">
+    <div className="row my-3 border shadow-lg rounded projectCard">
       <img src={img} alt="projectImage" className="col-6 project--img" />
       <div className="col">
         <h3 className="text-center">{title}</h3>

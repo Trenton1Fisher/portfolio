@@ -1,28 +1,13 @@
-import { useState, useEffect } from 'react'
+import { Link } from 'react-scroll'
 import resume from '../assets/pdfdown.pdf'
 
 export default function navbar() {
-  const [scroll, setScroll] = useState(0)
-
-  useEffect(() => {
-    function handleScroll() {
-      setScroll(window.pageYOffset)
-    }
-
-    window.addEventListener('scroll', handleScroll)
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
 
   return (
     <nav
-      className={`navbar navbar-expand-md navbar-light fixed-top ${
-        scroll > 0 ? 'bg-light' : ''
-      }`}
+      className="navbar navbar-expand-md navbar-light bg-light fixed-top"   
     >
-      <a href="#" className="navbar-brand text-dark ms-2">
+      <a href="/" className="navbar-brand text-dark ms-2">
         Trenton Fisher
       </a>
       <button
@@ -54,14 +39,18 @@ export default function navbar() {
             </a>
           </li>
           <li className="nav-item">
+            <Link to="projectComponent" smooth={true} duration={100} offset={-65}>
             <a className="nav-link text-dark" href="#">
               Projects
             </a>
+            </Link>
           </li>
           <li className="nav-item">
+            <Link to="contactSec" smooth={true} duration={100} offset={-65}>
             <a className="nav-link text-dark" href="#">
               Contact
             </a>
+            </Link>
           </li>
         </ul>
       </div>
