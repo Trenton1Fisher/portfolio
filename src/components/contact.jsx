@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
+import github from '/github.png'
+import linkdin from '/linkdin.png'
 
 export default function contact() {
   const [form, setForm] = useState({
@@ -39,18 +41,10 @@ export default function contact() {
             <h2>Contact Me</h2>
             <p className="m-0">trenton0fisher@gmail.com</p>
             <a href="">
-              <img
-                src="/linkdin.png"
-                alt="Linkdin Logo"
-                className="linkdin--logo"
-              />
+              <img src={linkdin} alt="Linkdin Logo" className="linkdin--logo" />
             </a>
             <a href="">
-              <img
-                src="/github.png"
-                alt="Github Logo"
-                className="github--logo"
-              />
+              <img src={github} alt="Github Logo" className="github--logo" />
             </a>
             <p>I am currently a third year studunt studying computer science</p>
           </div>

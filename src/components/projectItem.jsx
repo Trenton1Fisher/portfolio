@@ -1,7 +1,9 @@
-export default function projectItem({ title, img, stack, liveLink, gitLink }) {
+import test from '/test.png'
+
+export default function projectItem({ title, stack, liveLink, gitLink }) {
   return (
     <div className="row my-3 border shadow-lg rounded projectCard">
-      <img src={img} alt="projectImage" className="col-6 project--img" />
+      <img src={test} alt="projectImage" className="col-6 project--img" />
       <div className="col">
         <h3 className="text-center">{title}</h3>
         <p>

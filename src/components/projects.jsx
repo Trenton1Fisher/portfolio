@@ -10,7 +10,6 @@ export default function projectSection() {
           <ProjectItem
             key={project.id}
             title={project.title}
-            img={project.imgUrl}
             stack={project.stack}
           />
         ))}
