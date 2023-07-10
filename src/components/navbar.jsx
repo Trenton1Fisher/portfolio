@@ -1,13 +1,33 @@
 import { Link } from 'react-scroll'
 import resume from '../assets/pdfdown.pdf'
+import { useState, useEffect } from 'react'
 
-export default function navbar() {
+export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true)
+      } else {
+        setScrolled(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   return (
     <nav
-      className="navbar navbar-expand-md navbar-light bg-light fixed-top"   
+      className={`navbar navbar-expand-md fixed-top ${
+        scrolled ? 'scrolled' : ''
+      }`}
     >
-      <a href="/" className="navbar-brand text-dark ms-2">
+      <a href="/" className="navbar-brand ms-2 text-light">
         Trenton Fisher
       </a>
       <button
@@ -24,13 +44,8 @@ export default function navbar() {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav ms-auto">
           <li className="nav-item">
-            <a className="nav-link text-dark" href="#">
-              About
-            </a>
-          </li>
-          <li className="nav-item">
             <a
-              className="nav-link text-dark"
+              className="nav-link"
               href={resume}
               download="Trenton-Fisher-Resume.pdf"
               name="Resume"
@@ -39,17 +54,25 @@ export default function navbar() {
             </a>
           </li>
           <li className="nav-item">
-            <Link to="projectComponent" smooth={true} duration={100} offset={-65}>
-            <a className="nav-link text-dark" href="#">
+            <Link
+              to="projectComponent"
+              smooth={true}
+              duration={100}
+              offset={-65}
+              className="nav-link"
+            >
               Projects
-            </a>
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="contactSec" smooth={true} duration={100} offset={-65}>
-            <a className="nav-link text-dark" href="#">
+            <Link
+              to="contactSec"
+              smooth={true}
+              duration={100}
+              offset={-65}
+              className="nav-link"
+            >
               Contact
-            </a>
             </Link>
           </li>
         </ul>

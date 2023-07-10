@@ -34,7 +34,7 @@ export default function contact() {
   }
 
   return (
-    <div className="bg-dark mt-5 contact--wrapper" id="cont" name="contactSec">
+    <div className="mt-5 contact--wrapper" id="cont" name="contactSec">
       <div className="container">
         <div className="row">
           <div className=" col-sm-6 about contact rounded me-5">

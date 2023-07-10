@@ -1,20 +1,39 @@
 import { Typewriter } from 'react-simple-typewriter'
-import { Link } from 'react-scroll'
+import { useEffect } from 'react'
 
 export default function header() {
+  useEffect(() => {
+    const handleMove = e => {
+      const left = document.getElementById('left-side')
+      left.style.width = `${(e.clientX / window.innerWidth) * 100}%`
+    }
+
+    document.onmousemove = e => handleMove(e)
+    document.ontouchmove = e => handleMove(e.touches[0])
+
+    return () => {
+      document.onmousemove = null
+      document.ontouchmove = null
+    }
+  }, [])
   return (
-    <section id="hero--img">
-      <div className="text-center header">
-        <h1 className="text-dark d-block">
-          <Typewriter words={['Trenton Fisher']} typeSpeed={100} loop={2} />
-        </h1>
-        <h6 className="text-dark d-block">Front End Web Developer</h6>
-        <Link to="projectComponent" smooth={true} duration={100} offset={-65}>
-          <button className="projectButton px-2 py-1 my-2 bg-dark text-light shadow-sm">
-            See My Work
-          </button>
-        </Link>
-      </div>
-    </section>
+    <>
+      <section id="left-side" className="side">
+        <div className="">
+          <h1 className="title">
+            <Typewriter words={['Trenton Fisher']} typeSpeed={100} loop={1} />{' '}
+            <span className="fancy"> Front End Web Developer</span>
+          </h1>
+        </div>
+      </section>
+      <section id="right-side" className="side">
+        <div className="">
+          <h1 className="title">
+            <Typewriter words={['Trenton Fisher']} typeSpeed={100} loop={1} />{' '}
+            <span className="fancy"> Front End Web Developer</span>
+          </h1>
+        </div>
+      </section>
+    </>
   )
 }
