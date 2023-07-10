@@ -1,7 +1,7 @@
 import { Typewriter } from 'react-simple-typewriter'
 import { useEffect } from 'react'
 
-export default function header() {
+export default function Header() {
   useEffect(() => {
     const handleMove = e => {
       const left = document.getElementById('left-side')

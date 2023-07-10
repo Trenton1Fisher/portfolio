@@ -1,8 +1,7 @@
-import { useState, useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import './App.css'
 import Navbar from './components/navbar.jsx'
-import Header from './components/header'
+import Header from './components/header.jsx'
 import Project from './components/projects.jsx'
 import Contact from './components/contact'
 

@@ -8,12 +8,17 @@
 
   --left-color: var(--c1);
   --right-color: var(--c2);
+
+  --projects: 3;
+  --projectHeight: 87vh;
+  --projectTopPadding: 1.5em;
+  --projectMargin: 4vw;
 }
 
 body {
   min-width: 320px;
   min-height: 100vh;
-  background-color: var(--dark);
+  background-color: rgb(20, 20, 20);
   margin: 0px;
   font-family: 'Poppins', sans-serif !important;
 }
@@ -27,14 +32,15 @@ h4 {
   color: white;
 }
 
+/***************/
 /* Header Css  */
+/***************/
 .side {
   display: grid;
-  height: 100vh;
   overflow: hidden;
   place-items: center;
-  position: absolute;
-  width: 100%;
+  position: relative;
+  height: 100vh;
 }
 
 .side .title {
@@ -47,7 +53,7 @@ h4 {
 }
 
 .side .fancy {
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Permanent Marker';
   font-size: 1.5em;
   line-height: 0.8em;
   display: block;
@@ -57,7 +63,11 @@ h4 {
 #left-side {
   background-color: var(--left-color);
   width: 60%;
-  z-index: 2;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
 }
 
 #left-side .title {
@@ -65,11 +75,11 @@ h4 {
 }
 
 #left-side .fancy {
-  color: var(--right-color);
+  color: #a878b0;
 }
 
 #right-side {
-  background-color: var(--right-color);
+  background-color: #a878b0;
 }
 
 #right-side .title {
@@ -78,4 +88,73 @@ h4 {
 
 #right-side .fancy {
   color: white;
+}
+
+@keyframes stackAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/***************/
+/*Projects Css*/
+/***************/
+
+.projectSection {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#projects {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(var(--projects), var(--projectHeight));
+  gap: var(--projectMargin);
+  padding-bottom: calc(var(--projects) * var(--projectTopPadding));
+  margin-bottom: var(--projectMargin);
+}
+
+#project1 {
+  --index: 1;
+}
+
+#project2 {
+  --index: 2;
+}
+
+#project3 {
+  --index: 3;
+}
+
+.project {
+  position: sticky;
+  top: 4rem;
+  padding-top: calc(var(--index) * var(--projectTopPadding));
+}
+
+#project1 .project-body {
+  background-color: #a878b0;
+}
+
+#project2 .project-body {
+  background-color: #c4a029;
+}
+
+#project3 .project-body {
+  background-color: #ce7451;
+}
+
+.project-body {
+  box-sizing: border-box;
+  padding: 30px;
+  border-radius: 50px;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
+  height: var(--projectHeight);
 }
