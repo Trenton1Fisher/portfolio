@@ -1,12 +1,12 @@
 import './App.css'
 import Navbar from './components/Navbar'
-import BackgroundImage from './components/BackroundImage'
+import LandingPage from './components/LandingPage'
 
 function App() {
   return (
     <>
       <Navbar />
-      <BackgroundImage />
+      <LandingPage />
     </>
   )
 }
