@@ -1,5 +1,6 @@
 import { projects } from '../projectData'
-import ukJobbleImage from '/uk-jobble.png'
+import drawbaordImage from '/drawbaordImage.png'
+import UkJobbleImage from '/uk-jobble.png'
 
 export default function Projects() {
   return (
@@ -11,7 +12,17 @@ export default function Projects() {
             <div className="max-w-md relative rainbow-backround group shadow-lg mx-auto">
               <img
                 className="w-full object-cover p-2 rounded-xl"
-                src={ukJobbleImage}
+                src={
+                  project.id === 1
+                    ? UkJobbleImage
+                    : project.id === 2
+                    ? drawbaordImage
+                    : project.id === 3
+                    ? UkJobbleImage
+                    : project.id === 4
+                    ? UkJobbleImage
+                    : ''
+                }
                 alt="Project"
               />
               <div className="px-6 py-2">

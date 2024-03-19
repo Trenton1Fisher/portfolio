@@ -5,6 +5,7 @@ import About from './About'
 import Particles, { initParticlesEngine } from '@tsparticles/react'
 import { type Container, type ISourceOptions } from '@tsparticles/engine'
 import { loadSlim } from '@tsparticles/slim'
+import { SyncLoader } from 'react-spinners'
 
 export default function LandingPage() {
   const [init, setInit] = useState(false)
@@ -73,5 +74,12 @@ export default function LandingPage() {
     )
   }
 
-  return <></>
+  return (
+    <>
+      <h2 className="font-semibold text-2xl mb-4">
+        Loading Assets Please Stand By...
+      </h2>
+      <SyncLoader color="#FF44EC" speedMultiplier={0.5} />
+    </>
+  )
 }
