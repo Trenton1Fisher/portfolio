@@ -33,7 +33,7 @@ export default function LandingPage() {
         },
         move: {
           enable: true,
-          outModes: undefined, // Set outModes to undefined if you don't want to specify any particular behavior
+          outModes: undefined,
           random: false,
           speed: 0.5,
           straight: true,
