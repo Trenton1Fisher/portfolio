@@ -1,13 +1,31 @@
-import { Link } from 'react-scroll'
+import { Link } from 'react-scroll';
+import { motion } from 'framer-motion';
 
 export default function Header() {
   return (
-    <section className="text-center h-screen flex flex-col justify-center items-center">
+    <motion.section 
+      className="text-center h-screen flex flex-col justify-center items-center"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <div className="mt-[-250px]">
-        <h1 className="text-7xl font-bold">Trenton Fisher</h1>
-        <h2 className="text-5xl font-bold  bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] text-transparent bg-clip-text p-4 mb-8">
+        <motion.h1 
+          className="text-7xl font-bold"
+          initial={{ y: -50 }}
+          animate={{ y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          Trenton Fisher
+        </motion.h1>
+        <motion.h2 
+          className="text-5xl font-bold  bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] text-transparent bg-clip-text p-4 mb-8"
+          initial={{ y: -50 }}
+          animate={{ y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
           Software Engineer
-        </h2>
+        </motion.h2>
         <Link
           to="projects"
           spy={true}
@@ -18,6 +36,7 @@ export default function Header() {
           View My Work
         </Link>
       </div>
-    </section>
+    </motion.section>
   )
 }
+

@@ -10,14 +10,25 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.3.3",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/material": "^5.15.15",
+    "@react-email/components": "0.0.16",
+    "@react-email/render": "^0.0.12",
     "@tsparticles/engine": "^3.3.0",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.3.0",
+    "framer-motion": "^11.0.25",
+    "mailersend": "^2.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-email": "2.1.1",
     "react-scroll": "^1.9.0",
     "react-spinners": "^0.13.8",
-    "react-tsparticles": "^2.12.2"
+    "react-tsparticles": "^2.12.2",
+    "resend": "^3.2.0",
+    "sweetalert": "^2.1.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.56",

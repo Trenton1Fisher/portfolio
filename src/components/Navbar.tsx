@@ -18,14 +18,26 @@ export default function Navbar() {
           <span className="relative">Download CV</span>
           <span className="absolute -bottom-2 left-0 w-0 h-1 bg-white mt-2 transition-all group-hover:w-full"></span>
         </a>
-        <a href="#" className="relative group cursor-pointer mr-6 nav-link">
+        <Link
+          to="about"
+          spy={true}
+          smooth={true}
+          duration={1200}
+          className='relative group cursor-pointer mr-6 nav-link'
+        >
           <span className="relative">About</span>
           <span className="absolute -bottom-2 left-0 w-0 h-1 bg-white mt-2 transition-all group-hover:w-full"></span>
-        </a>
-        <a href="#" className="relative group cursor-pointer mr-6 nav-link">
+        </Link>
+        <Link
+          to="contact"
+          spy={true}
+          smooth={true}
+          duration={1200}
+          className='relative group cursor-pointer mr-6 nav-link'
+        >
           <span className="">Contact</span>
           <span className="absolute -bottom-2 left-0 w-0 h-1 bg-white mt-2 transition-all group-hover:w-full"></span>
-        </a>
+        </Link>
       </div>
     </nav>
   )

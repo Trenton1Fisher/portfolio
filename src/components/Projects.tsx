@@ -4,6 +4,7 @@ import UkJobbleImage from '/uk-jobble.png'
 import ParserImage from '/parser.png'
 import LinkImage from '/link.png'
 import GithubImage from '/github.png'
+import EcomImage from '/ecom.png'
 import { Element } from 'react-scroll'
 
 export default function Projects() {
@@ -26,31 +27,47 @@ export default function Projects() {
                     : project.id === 3
                     ? ParserImage
                     : project.id === 4
-                    ? UkJobbleImage
+                    ? EcomImage
                     : ''
                 }
                 alt="Project"
               />
               <div className="px-6 py-2">
-                <div className="font-bold text-xl text-white mb-2">
+                <div
+                  className={`font-bold text-xl mb-2 ${
+                    project.id === 4 ? 'text-red-700' : 'text-white'
+                  }`}
+                >
                   {project.title}
                 </div>
-                <p className="text-white text-sm">{project.description}</p>
+                <p
+                  className={`text-white text-sm ${
+                    project.id === 4 ? 'blur' : ''
+                  }`}
+                >
+                  {project.description}
+                </p>
               </div>
-              <div className="px-6 pt-2 pb-4">
-                {project.stack.map((teck, index) => (
+              <div
+                className={`px-6 pt-2 pb-4 ${project.id === 4 ? 'blur' : ''}`}
+              >
+                {project.stack.map((tech, index) => (
                   <span
                     key={index}
                     className="inline-block border rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2"
                   >
-                    {teck}
+                    {tech}
                   </span>
                 ))}
               </div>
-              <div className="flex justify-center pb-2 space-x-4">
+              <div
+                className={`flex justify-center pb-2 space-x-4 ${
+                  project.id === 4 ? 'blur' : ''
+                }`}
+              >
                 <a
                   className="flex items-center hover:opacity-80"
-                  href={project.liveLink}
+                  href={project.id === 4 ? '#' : project.liveLink}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -59,7 +76,7 @@ export default function Projects() {
                 </a>
                 <a
                   className="flex items-center hover:opacity-80"
-                  href={project.gitLink}
+                  href={project.id === 4 ? '#' : project.gitLink}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
