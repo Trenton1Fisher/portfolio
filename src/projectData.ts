@@ -11,16 +11,6 @@ export const projects = [
   },
   {
     id: 2,
-    title: 'Drawboard',
-    description:
-      "Drawboard is an application that is built off of React and Socket.io, utilizing HTML5's canvas element and websockets for real time connections with the server. Users will have the ability to toggle between colors, draw, and export their work as a PNG",
-    stack: ['React', 'Node.js', 'Socket.io', 'Typescript'],
-    gitLink: 'https://github.com/Trenton1Fisher/drawboard',
-    liveLink: 'https://drawboard.trentonfisher.xyz',
-    imgUrl: '/drawbaordImage',
-  },
-  {
-    id: 3,
     title: 'Csv Parser',
     description:
       'Application that allows user to upload a csv and do a multitude of tasks and returns a newly updated csv file, features include sorting the file based on numeric or character values, searching for specific rows based on field values, and deleting duplicates',
@@ -30,8 +20,18 @@ export const projects = [
     imgUrl: '/parser.png',
   },
   {
+    id: 3,
+    title: 'Drawboard',
+    description:
+      "Drawboard is an application that is built off of React and Socket.io, utilizing HTML5's canvas element and websockets for real time connections with the server. Users will have the ability to toggle between colors, draw, and export their work as a PNG",
+    stack: ['React', 'Node.js', 'Socket.io', 'Typescript'],
+    gitLink: 'https://github.com/Trenton1Fisher/drawboard',
+    liveLink: 'https://drawboard.trentonfisher.xyz',
+    imgUrl: '/drawbaordImage',
+  },
+  {
     id: 4,
-    title: 'Eccommerce Application (Coming Soon)',
+    title: '(Coming Soon)',
     description:
       'Eccommerce Application that allows users to view various products from technology, clothing, and jewarly utilizing the fakestore api. Users can log in and customize their cart and paroceed to experience the entire checkout flow.',
     stack: ['NextJs', 'Typescript', 'LibSQL', 'Supabase Auth'],

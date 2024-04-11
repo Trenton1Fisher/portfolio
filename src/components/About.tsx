@@ -37,13 +37,13 @@ export default function About() {
   }
 
   return (
-    <section className="flex max-md:flex-col h-screen items-center justify-center h-screen max-md:mt-12">
+    <section className="flex max-md:flex-col md:h-screen items-center justify-center py-24 md:py-12">
       <div className="flex max-md:flex-col foggy-glass shadow-xl z-[400] p-12 rounded-xl">
-        <div className=" md:w-3/5 md:mr-4 max-md:mb-4 md:h-[550px]">
+        <div className=" md:w-3/5 md:mr-4 max-md:mb-4">
           <Element name="about">
             <h3 className="text-4xl font-bold mb-4">About Me</h3>
           </Element>
-          <p className="text-left text-lg">
+          <p className="md:text-left md:text-lg">
             Hi there! I'm Trenton Fisher, a passionate student pursuing a degree
             in Computer Science at Oregon State University. Technology has
             always fascinated me, and studying computer science has provided me
@@ -56,7 +56,7 @@ export default function About() {
             enjoying the thrill of the game.
           </p>
         </div>
-        <div className=" flex flex-col md:w-3/5 md:h-[550px]">
+        <div className=" flex flex-col md:w-3/5">
           <Element name="contact">
             <h3 className="text-4xl font-bold mb-4">Contact</h3>
           </Element>

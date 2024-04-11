@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import Header from './Header'
 import Projects from './Projects'
 import About from './About'
+import Technologies from './Technologies'
 import Particles, { initParticlesEngine } from '@tsparticles/react'
 import { type Container, type ISourceOptions } from '@tsparticles/engine'
 import { loadSlim } from '@tsparticles/slim'
@@ -64,6 +65,7 @@ export default function LandingPage() {
       <>
         <Header />
         <Projects />
+        <Technologies />
         <About />
         <Particles
           id="tsparticles"

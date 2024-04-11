@@ -16,16 +16,16 @@ export default function Projects() {
       <div className="flex flex-wrap justify-center">
         {projects.map(project => (
           <div className="p-4 md:w-1/2 lg:w-1/2" key={project.id}>
-            <div className="max-w-[500px] min-h-[500px] z-[999] relative rainbow-backround group shadow-lg mx-auto">
+            <div className="max-w-[500px] min-h-[500px] z-[400] relative rainbow-backround group shadow-lg mx-auto">
               <img
                 className="object-cover w-full h-78 p-1 rounded-lg"
                 src={
                   project.id === 1
                     ? UkJobbleImage
                     : project.id === 2
-                    ? drawbaordImage
-                    : project.id === 3
                     ? ParserImage
+                    : project.id === 3
+                    ? drawbaordImage
                     : project.id === 4
                     ? EcomImage
                     : ''
